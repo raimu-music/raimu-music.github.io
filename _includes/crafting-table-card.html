@@ -1,0 +1,80 @@
+{% assign recipe = include.recipe %}
+{% assign desc = include.desc %}
+
+{% if include.pixelated %}
+  {% assign p = "image-rendering: pixelated;" %}
+{% else %}
+  {% assign p = "" %}
+{% endif %}
+
+<div class="crafting-container">
+  <div class="crafting-header">
+    <h3 id="{{ recipe.id }}" class="crafting-title">{{ recipe.name }}</h3>
+  </div>
+  <div class="crafting-body">
+    <div style="display: flex">
+      <!-- Left side image -->
+      <div style="min-width: 136px; max-width: 136px; position: relative; padding-left: 0px">
+        <div id="image_wrapper" style="position: relative">
+          <img src="/img/spell_frame.png" style="width: 120px; image-rendering: pixelated; position: relative; top:0px; left: 10px;">
+          <img src="/img/item_background.png" style="width: 80px; {{ p }} position: absolute; top: 35px; left: 30px;">
+          <img src="{{ recipe.path }}" style="width: 75px; {{ p }} position: absolute; top: 36px; left: 31px;" title="{{ recipe.name }}">
+        </div>
+      </div>
+
+      <!-- Description & Tooltip -->
+      <div style="padding: 5px; margin-top: 3px; text-align: left">
+        {{ desc }}
+
+        {% if recipe.tooltip != "" and desc != "" and recipe.tooltip != desc %}
+          <hr style="border-color: rgba(255,255,255,.2);">
+        {% endif %}
+
+        {% if recipe.tooltip != "" and recipe.tooltip != desc %}
+          {{ recipe.tooltip | replace: ",", "<br>" }}
+        {% endif %}
+      </div>
+
+      <!-- Crafting Grid -->
+      {% if recipe.craftingType == "crafting" %}
+        {% assign padding = 5 %}
+        {% assign size = 26 %}
+        {% assign top = 12 %}
+        {% assign left = 10 %}
+
+        <div style="min-width: 220px; max-width:220px; position: relative; float: right; margin-top: 15px; margin-left: auto">
+          <img id="crafting_table" src="/img/crafting_table.png" style="width: 420px; {{ p }} position: relative; top:0; left: 0;">
+
+          {% assign positions = "0,1,2,3,4,5,6,7,8" | split: "," %}
+          {% for i in positions %}
+            {% assign row = i | divided_by: 3 %}
+            {% assign col = i | modulo: 3 %}
+            {% assign topPos = top | plus: row | times: size | plus: row | times: padding %}
+            {% assign leftPos = left | plus: col | times: size | plus: col | times: padding %}
+
+            {% assign itemPath = recipe["item" | append: i | append: "Path"] %}
+            {% assign itemName = recipe["item" | append: i] %}
+
+            {% if itemPath %}
+              <img id="slot{{ i | plus: 1 }}" src="{{ itemPath }}" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ topPos }}px; left: {{ leftPos }}px;" title="{{ itemName }}">
+            {% endif %}
+          {% endfor %}
+
+          <img id="output" src="{{ recipe.path }}" style="width: 38px; {{ p }} position: absolute; top: 38px; left: 165px;" title="{{ recipe.name }}">
+        </div>
+
+      <!-- Smithing Table -->
+      {% elsif recipe.craftingType == "smithing" %}
+        {% assign size = 26 %}
+        {% assign top = 62 %}
+
+        <div style="min-width: 220px; max-width:220px; position: relative; float: right; margin-top: 15px; margin-left: auto">
+          <img id="crafting_table" src="/img/smithing_table.png" style="width: 420px; {{ p }} position: relative; top:0; left: 0;">
+          <img id="slot1" src="{{ recipe.item0Path }}" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ top }}px; left: 10px;" title="{{ recipe.item0 }}">
+          <img id="slot2" src="{{ recipe.item1Path }}" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ top }}px; left: 87px;" title="{{ recipe.item1 }}">
+          <img id="output" src="{{ recipe.path }}" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ top }}px; left: 182px;" title="{{ recipe.name }}">
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
