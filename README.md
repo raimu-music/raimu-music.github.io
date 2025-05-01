@@ -44,7 +44,7 @@ This work is published under [MIT][mit] License.
 
 
 
-# Examples of how to write md on Chirpy: 
+# Examples of how to write md on Chirpy:  https://chirpy.cotes.page/posts/text-and-typography/
 
 ## Headings
 
