@@ -21,4 +21,4 @@ toc: true
 {% endfor %}
 
 <!-- buffer for the TOC -->
-<div style="height: 800px"></div> 
+<div style="height: 800px"></div>
