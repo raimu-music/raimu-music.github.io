@@ -39,7 +39,7 @@
         {%assign left = "10" %}
 
         <div style="min-width: 220px; max-width:220px; position: relative; float: right; margin-top: 15px; margin-left: auto">
-          <img id="crafting_table" src="/img/crafting_table.png" style="width: 420px; {{p}} position: relative; top:0; left: 0;">
+          <img id="crafting_table" src="/img/gui/crafting_table.png" style="width: 420px; {{p}} position: relative; top:0; left: 0;">
           {% if recipe.item0Id contains "coinscoinscoins" %}<a href="../items/#{{recipe.item0Id}}">{% endif%}
             <img id="slot1" src="{{recipe.item0Path}}" style="width: {{size}}px; {{p}} position: absolute; top: {{top}}px; left: {{left}}px;" title="{{recipe.item0}}">
           {% if recipe.item0Id contains "coinscoinscoins" %}</a>{% endif%}
