@@ -112,7 +112,7 @@
   tooltip: ""
   description: "A copper nugget."
 
-  - id: "coinscoinscoins:coin_iron"
+- id: "coinscoinscoins:coin_iron"
   name: "Iron Coin"
   path: "/img/items/coinscoinscoins/coin_iron.png"
   group: "All"
