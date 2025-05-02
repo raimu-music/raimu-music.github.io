@@ -2,6 +2,7 @@
   name: "Copper Coin Pile"
   path: "/img/items/coinscoinscoins/coin_pile_copper.png"
   group: "All"
+  outputQuantity: 1
   craftingType: "crafting"
   item0Id: "coinscoinscoins:coin_copper"
   item0: "Copper Coin"
