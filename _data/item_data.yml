@@ -32,3 +32,11 @@
   item8Path: "/img/items/coinscoinscoins/coin_copper.png"
   tooltip: ""
   description: ""
+
+- id: "coinscoinscoins:coin_copper"
+  name: "Copper Coin"
+  path: "/img/items/coinscoinscoins/coin_copper.png"
+  group: "All"
+  craftingType: "none"
+  tooltip: ""
+  description: "A single copper coin used as currency."
