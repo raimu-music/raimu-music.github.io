@@ -1,5 +1,11 @@
 coinscoinscoins:coin_copper:
-  description: "test."
+  description: "A single Copper Nugget can be smelted into a Copper Coin."
+
+coinscoinscoins:coin_copper_smelting:
+  description: "You can obtain 9x Copper Coins by smelting an Iron Coin."
+
+coinscoinscoins:coin_copper_frompile:
+  description: "You can obtain 9x Copper Coins by un-crafting a Copper Coin Pile."
 
 coinscoinscoins:coin_pile_copper:
   description: "Crafting ingredient"
