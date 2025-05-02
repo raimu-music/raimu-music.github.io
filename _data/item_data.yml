@@ -1,4 +1,4 @@
-- id: "coinscoinscoins:coin_copper_smelting"
+- id: "coinscoinscoins:coin_copper"
   name: "Copper Coin (1)"
   path: "/img/items/coinscoinscoins/coin_copper.png"
   group: "All"
@@ -33,7 +33,7 @@
   tooltip: ""
   description: ""
 
-- id: "coinscoinscoins:coin_copper"
+- id: "coinscoinscoins:coin_copper_smelting"
   name: "Copper Coin (2)"
   path: "/img/items/coinscoinscoins/coin_copper.png"
   group: "All"
@@ -69,7 +69,7 @@
   tooltip: ""
   description: ""
 
-- id: "coinscoinscoins:coin_copper"
+- id: "coinscoinscoins:coin_copper_frompile"
   name: "Copper Coin (3)"
   path: "/img/items/coinscoinscoins/coin_copper.png"
   group: "All"
