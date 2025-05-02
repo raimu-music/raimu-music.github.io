@@ -38,9 +38,12 @@
   path: "/img/items/coinscoinscoins/coin_copper.png"
   group: "All"
   outputQuantity: 9
-  craftingType: "none"
+  craftingType: "smelting"
+  item0Id: "coinscoinscoins:copper_iron"
+  item0: "Copper Nugget"
+  item0Path: "/img/items/coinscoinscoins/coin_iron.png"
   tooltip: ""
-  description: "A single copper coin used as currency."
+  description: ""
 
 - id: "coinscoinscoins:coin_copper_smelting"
   name: "Copper Coin"
@@ -84,3 +87,11 @@
   craftingType: "none"
   tooltip: ""
   description: "A copper nugget."
+
+  - id: "coinscoinscoins:coin_iron"
+  name: "Iron Coin"
+  path: "/img/items/coinscoinscoins/coin_iron.png"
+  group: "All"
+  craftingType: "none"
+  tooltip: ""
+  description: "A single iron coin used as currency."
