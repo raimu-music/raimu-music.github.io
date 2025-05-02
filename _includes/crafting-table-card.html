@@ -81,11 +81,13 @@
             <!-- Output image -->
             <img id="output" src="{{recipe.path}}" alt="{{ itemName }}" 
                  style="width: 100%; height: 100%; {{p}}" 
-                 title="{{recipe.name}} (x{{recipe.outputQuantity}})">
-            <!-- Quantity text -->
-            <span style="position: absolute; bottom: 2px; right: 2px; font-size: 12px; color: white; background: rgba(0, 0, 0, 0.5); padding: 1px 3px; border-radius: 3px;">
-              x{{recipe.outputQuantity}}
-            </span>
+                 title="{{recipe.name}} {% if recipe.outputQuantity > 1 %}(x{{recipe.outputQuantity}}){% endif %}">
+            <!-- Quantity text (shown only if outputQuantity > 1) -->
+            {% if recipe.outputQuantity > 1 %}
+              <span style="position: absolute; bottom: 2px; right: 2px; font-size: 12px; color: white; background: rgba(0, 0, 0, 0.5); padding: 1px 3px; border-radius: 3px;">
+                x{{recipe.outputQuantity}}
+              </span>
+            {% endif %}
           </div>
         </div>
       {% elsif recipe.craftingType == "smithing" %}
@@ -123,16 +125,17 @@
           <img id="fuel" src="/img/items/minecraft/coal.png" alt="Coal" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ fuelTop }}px; left: {{ fuelLeft }}px;" title="Coal">
           
           <!-- Output item -->
-          <!-- Parent container for the output image and quantity text -->
           <div style="position: relative; display: inline-block; width: 38px; height: 38px;">
-            <!-- Furnace output item -->
+            <!-- Output image -->
             <img id="output" src="{{ recipe.path }}" alt="{{ itemName }}" 
                  style="width: 100%; height: 100%; {{ p }}" 
-                 title="{{ recipe.name }} (x{{ recipe.outputQuantity }})">
+                 title="{{ recipe.name }} {% if recipe.outputQuantity > 1 %}(x{{ recipe.outputQuantity }}){% endif %}">
             <!-- Quantity text -->
-            <span style="position: absolute; bottom: 2px; right: 2px; font-size: 12px; color: white; background: rgba(0, 0, 0, 0.5); padding: 1px 3px; border-radius: 3px;">
-              x{{ recipe.outputQuantity }}
-            </span>
+            {% if recipe.outputQuantity > 1 %}
+              <span style="position: absolute; bottom: 2px; right: 2px; font-size: 12px; color: white; background: rgba(0, 0, 0, 0.5); padding: 1px 3px; border-radius: 3px;">
+                x{{ recipe.outputQuantity }}
+              </span>
+            {% endif %}
           </div>
         </div>
       {%endif%}
