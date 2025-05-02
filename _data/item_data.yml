@@ -34,8 +34,8 @@
   tooltip: ""
   description: ""
 
-- id: "coinscoinscoins:coin_copper"
-  name: "Copper Coin"
+- id: "coinscoinscoins:coin_copper_downgrade"
+  name: "Copper Coin (2)"
   path: "/img/items/coinscoinscoins/coin_copper.png"
   group: "All"
   outputQuantity: 9
@@ -71,7 +71,7 @@
   description: ""
 
 - id: "coinscoinscoins:coin_copper_smelting"
-  name: "Copper Coin"
+  name: "Copper Coin (1)"
   path: "/img/items/coinscoinscoins/coin_copper.png"
   group: "All"
   craftingType: "smelting"
