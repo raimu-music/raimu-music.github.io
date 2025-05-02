@@ -16,8 +16,8 @@
       <!-- Left side image -->
       <div style="min-width: 136px; max-width: 136px; position: relative; padding-left: 0px">
         <div id="image_wrapper" style="position: relative">
-          <img src="/img/item_frame.png" style="width: 120px; image-rendering: pixelated; position: relative; top:0px; left: 10px;">
-          <img src="/img/item_background.png" style="width: 80px; {{ p }} position: absolute; top: 35px; left: 30px;">
+          <img src="/img/gui/item_frame.png" style="width: 120px; image-rendering: pixelated; position: relative; top:0px; left: 10px;">
+          <img src="/img/gui/item_background.png" style="width: 80px; {{ p }} position: absolute; top: 35px; left: 30px;">
           <img src="{{ recipe.path }}" style="width: 75px; {{ p }} position: absolute; top: 36px; left: 31px;" title="{{ recipe.name }}">
         </div>
       </div>
@@ -75,32 +75,6 @@
           <img id="output" src="{{ recipe.path }}" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ top }}px; left: 182px;" title="{{ recipe.name }}">
         </div>
 
-      <!-- Furnace Smelthing -->
-      {% elsif recipe.craftingType == "smelting" %}
-        {% assign size = 26 %}
-        {% assign padding = 5 %}
-        {% assign top = 12 %}
-        {% assign left = 10 %}
-      
-        <!-- Calculate input and fuel positions -->
-        {% assign inputTop = top %}
-        {% assign inputLeft = left | plus: size | plus: padding %}
-      
-        {% assign fuelTop = top | plus: (size | times: 2) | plus: (padding | times: 2) %}
-        {% assign fuelLeft = inputLeft %}
-      
-        <div style="min-width: 220px; max-width:220px; position: relative; float: right; margin-top: 15px; margin-left: auto">
-          <img id="smelting_furnace" src="/img/gui/furnace.png" style="width: 420px; {{ p }} position: relative; top:0; left: 0;">
-          
-          <!-- Input item -->
-          <img id="input" src="{{ recipe.item0Path }}" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ inputTop }}px; left: {{ inputLeft }}px;" title="{{ recipe.item0 }}">
-      
-          <!-- Fuel item (coal) -->
-          <img id="fuel" src="/img/items/coal.png" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ fuelTop }}px; left: {{ fuelLeft }}px;" title="Coal">
-      
-          <!-- Output item -->
-          <img id="output" src="{{ recipe.path }}" style="width: 38px; {{ p }} position: absolute; top: 38px; left: 165px;" title="{{ recipe.name }}">
-        </div>
 
 
       {% endif %}
