@@ -87,6 +87,32 @@
           <img id="slot2" src="{{recipe.item1Path}}" alt="{{ itemName }}" style="width: {{size}}px; image-rendering: pixelated; position: absolute; top: {{top}}px; left: 87px;" title="{{recipe.item1}}">
           <img id="output" src="{{recipe.path}}" alt="{{ itemName }}" style="width: {{size}}px; image-rendering: pixelated; position: absolute; top: {{top}}px; left: 182px;" title="{{recipe.name}}">
         </div>
+
+            <!-- Furnace Smelthing -->
+      {% elsif recipe.craftingType == "smelting" %}
+        {% assign size = 26 %}
+        {% assign padding = 5 %}
+        {% assign top = 12 %}
+        {% assign left = 10 %}
+      
+        <!-- Calculate input and fuel positions -->
+        {% assign inputTop = top %}
+        {% assign inputLeft = left | plus: size | plus: padding %}
+      
+        {% assign fuelTop = top | plus: (size | times: 2) | plus: (padding | times: 2) %}
+        {% assign fuelLeft = inputLeft %}
+      
+        <div style="min-width: 220px; max-width:220px; position: relative; float: right; margin-top: 15px; margin-left: auto">
+          <img id="crafting_table" src="/img/gui/furnace.png" alt ="Furnace" style="width: 420px; {{ p }} position: relative; top:0; left: 0;">
+          <!-- Input item -->
+          <img id="input" src="{{ recipe.item0Path }}" alt="{{ itemName }}" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ inputTop }}px; left: {{ inputLeft }}px;" title="{{ recipe.item0 }}">
+      
+          <!-- Fuel item (coal) -->
+          <img id="fuel" src="/img/items/coal.png" alt="Coal" style="width: {{ size }}px; {{ p }} position: absolute; top: {{ fuelTop }}px; left: {{ fuelLeft }}px;" title="Coal">
+      
+          <!-- Output item -->
+          <img id="output" src="{{ recipe.path }}" alt="{{ itemName }}" style="width: 38px; {{ p }} position: absolute; top: 38px; left: 165px;" title="{{ recipe.name }}">
+        </div>
       {%endif%}
     </div>
   </div>
