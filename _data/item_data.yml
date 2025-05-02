@@ -37,6 +37,7 @@
   name: "Copper Coin"
   path: "/img/items/coinscoinscoins/coin_copper.png"
   group: "All"
+  outputQuantity: 9
   craftingType: "none"
   tooltip: ""
   description: "A single copper coin used as currency."
