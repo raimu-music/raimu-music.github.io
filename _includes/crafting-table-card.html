@@ -40,7 +40,7 @@
 
         <div style="min-width: 220px; max-width:220px; position: relative; float: right; margin-top: 15px; margin-left: auto">
           <img id="crafting_table" src="/img/gui/crafting_table.png" alt="Crafting Table" style="width: 420px; {{p}} position: relative; top:0; left: 0;">
-          {% if recipe.item0Id contains "coinscoinscoins" %}<a href="../_tabs/wiki/#{{recipe.item0Id}}">{% endif%}
+          {% if recipe.item0Id contains "coinscoinscoins" %}<a href="../tabs/wiki/#{{recipe.item0Id}}">{% endif%}
             <img id="slot1" src="{{recipe.item0Path}}" alt="{{ itemName }}" style="width: {{size}}px; {{p}} position: absolute; top: {{top}}px; left: {{left}}px;" title="{{recipe.item0}}">
           {% if recipe.item0Id contains "coinscoinscoins" %}</a>{% endif%}
 
