@@ -6,3 +6,6 @@ coinscoinscoins:coin_pile_copper:
 
   coinscoinscoins:copper_nugget:
   description: "test."
+
+coinscoinscoins:coin_iron:
+  description: "test."
