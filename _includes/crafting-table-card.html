@@ -76,7 +76,8 @@
           <img id="slot9" src="{{recipe.item8Path}}" alt="{{ itemName }}" style="width: {{size}}px;{{p}} position: absolute; top: {{top | plus:padding | plus:size | plus: padding | plus: size}}px; left: {{left | plus:padding | plus:size | plus: padding | plus: size}}px;" title="{{recipe.item8}}">
           {% if recipe.item8Id contains "coinscoinscoins" %}</a>{% endif%}
 
-          <img id="output" src="{{recipe.path}}" alt="{{ itemName }}" style="width: 38px; {{p}} position: absolute; top: 38px; left: 165px;" title="{{recipe.name}}">
+          <img id="output" src="{{recipe.path}}" alt="{{ itemName }}" style="width: 38px; {{p}} position: absolute; top: 38px; left: 165px;" title="{{recipe.name}} (x{{recipe.outputQuantity}})">
+          <span style="position: absolute; top: 50px; left: 180px; font-size: 12px; color: white;">x{{recipe.outputQuantity}}</span>
         </div>
       {% elsif recipe.craftingType == "smithing" %}
         {%assign size = "26" %}
