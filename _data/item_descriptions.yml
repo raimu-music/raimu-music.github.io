@@ -3,3 +3,6 @@ coinscoinscoins:coin_copper:
 
 coinscoinscoins:coin_pile_copper:
   description: "Crafting ingredient"
+
+  coinscoinscoins:copper_nugget:
+  description: "test."
