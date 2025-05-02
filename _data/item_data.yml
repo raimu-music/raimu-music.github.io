@@ -34,7 +34,7 @@
   tooltip: ""
   description: ""
 
-- id: "coinscoinscoins:coin_copper_downgrade"
+- id: "coinscoinscoins:coin_copper"
   name: "Copper Coin (2)"
   path: "/img/items/coinscoinscoins/coin_copper.png"
   group: "All"
