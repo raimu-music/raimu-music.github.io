@@ -46,7 +46,7 @@
   path: "/img/items/coinscoinscoins/coin_copper.png"
   group: "All"
   craftingType: "smelting"
-  item0Id: "coinscoinscoins:copper_nugget"
+  item0Id: "coinscoinscoins:copper_nugget.png"
   item0: "Copper Nugget"
   item0Path: ""
   item1Id: ""
